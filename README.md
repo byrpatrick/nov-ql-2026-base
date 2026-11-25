@@ -27,6 +27,18 @@ npm install
 npx openspec --version
 ```
 
+## Ejecutar la aplicación
+
+Next.js + TypeScript, pruebas con Jest. Color base de la interfaz: **azul**.
+
+```sh
+npm install
+npm run dev        # http://localhost:3000
+npm test           # pruebas con Jest
+npm run typecheck  # verificación de tipos
+npm run build && npm start   # versión de producción
+```
+
 ## ¿Qué incluye?
 
 | Archivo / carpeta | Para qué sirve |
