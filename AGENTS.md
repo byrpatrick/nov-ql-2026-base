@@ -12,6 +12,8 @@ Estas reglas son obligatorias para cualquier asistente de IA que modifique este 
 | `npm test` | Pruebas con Jest |
 | `npm run typecheck` | Verificación de tipos (`tsc --noEmit`) |
 | `npm run build` | Build de producción |
+| `npm run lint` | ESLint (sin errores ni warnings) |
+| `npm run format` | Prettier |
 
 Antes de dar una tarea por terminada deben pasar: **pruebas, typecheck, linter y build**.
 
@@ -106,5 +108,6 @@ Antes de dar una tarea por terminada deben pasar: **pruebas, typecheck, linter y
 src/
   app/          # Rutas, layout y estilos globales (App Router)
   components/   # Componentes React (+ .module.css y .test.tsx)
+  hooks/        # Hooks personalizados useX (+ .test.ts)
   lib/          # Lógica pura de negocio (+ .test.ts)
 ```

@@ -34,8 +34,10 @@ Next.js + TypeScript, pruebas con Jest. Color base de la interfaz: **azul**.
 ```sh
 npm install
 npm run dev        # http://localhost:3000
-npm test           # pruebas con Jest
+npm test           # pruebas con Jest (npm test -- --coverage para cobertura)
 npm run typecheck  # verificación de tipos
+npm run lint       # ESLint
+npm run format     # Prettier
 npm run build && npm start   # versión de producción
 ```
 
