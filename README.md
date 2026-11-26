@@ -27,6 +27,27 @@ npm install
 npx openspec --version
 ```
 
+## Aplicación publicada (GitHub Pages)
+
+La aplicación se despliega automáticamente en GitHub Pages con cada `push` a `main` que pase el linter y las pruebas:
+
+- **URL en producción:** https://byrpatrick.github.io/nov-ql-2026-base/
+
+## Ejecutar la aplicación, pruebas y linter localmente
+
+Next.js (App Router) + TypeScript, pruebas con Jest + Testing Library. Color base de la interfaz: **azul**.
+
+```sh
+npm install
+npm run dev                  # servidor de desarrollo en http://localhost:3000
+npm test                     # ejecutar todas las pruebas automáticas con Jest
+npm test -- --coverage       # ejecutar pruebas y verificar cobertura (>= 80 %)
+npm run lint                 # ejecutar ESLint (sin errores ni warnings)
+npm run typecheck            # verificación de tipos con TypeScript
+npm run format               # formatear código con Prettier
+npm run build                # generar exportación estática en out/
+```
+
 ## ¿Qué incluye?
 
 | Archivo / carpeta | Para qué sirve |

@@ -1,0 +1,99 @@
+.controls {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.countLabel {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--blue-700);
+}
+
+.countSelect {
+  padding: 0.45rem 0.85rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid var(--blue-200);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--blue-700);
+  cursor: pointer;
+}
+
+.countSelect:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.drawButton {
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.6rem;
+  background: var(--blue-600);
+  color: var(--surface);
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    transform 0.05s;
+}
+
+.drawButton:hover:not(:disabled) {
+  background: var(--blue-700);
+}
+
+.drawButton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.resetButton {
+  background: none;
+  border: none;
+  color: var(--blue-600);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.drawButton:disabled,
+.resetButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.drawError {
+  margin: 1rem 0 0;
+  text-align: center;
+  color: var(--danger);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.countdown {
+  margin-top: 2rem;
+  padding: 2.25rem 1rem;
+  text-align: center;
+  color: var(--surface);
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px var(--blue-shadow);
+}
+
+.countdownNumber {
+  margin: 0;
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
