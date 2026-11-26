@@ -6,11 +6,13 @@ import styles from "./ParticipantForm.module.css";
 interface ParticipantFormProps {
   onAdd: (name: string) => boolean;
   errorMessage: string | null;
+  isDisabled?: boolean;
 }
 
 export default function ParticipantForm({
   onAdd,
   errorMessage,
+  isDisabled = false,
 }: ParticipantFormProps) {
   const [name, setName] = useState("");
   const inputId = useId();
@@ -34,10 +36,15 @@ export default function ParticipantForm({
           placeholder="Nombre del participante"
           value={name}
           onChange={(event) => setName(event.target.value)}
+          disabled={isDisabled}
           aria-invalid={errorMessage !== null}
           aria-describedby={errorMessage ? errorId : undefined}
         />
-        <button type="submit" className={styles.addButton}>
+        <button
+          type="submit"
+          className={styles.addButton}
+          disabled={isDisabled}
+        >
           Agregar
         </button>
       </form>

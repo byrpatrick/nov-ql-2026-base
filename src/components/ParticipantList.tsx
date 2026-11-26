@@ -3,11 +3,13 @@ import styles from "./ParticipantList.module.css";
 interface ParticipantListProps {
   participants: readonly string[];
   onRemove: (name: string) => void;
+  isDisabled?: boolean;
 }
 
 export default function ParticipantList({
   participants,
   onRemove,
+  isDisabled = false,
 }: ParticipantListProps) {
   return (
     <section aria-label="Participantes" className={styles.card}>
@@ -23,6 +25,7 @@ export default function ParticipantList({
                 type="button"
                 className={styles.removeButton}
                 onClick={() => onRemove(participant)}
+                disabled={isDisabled}
                 aria-label={`Quitar a ${participant}`}
               >
                 ✕

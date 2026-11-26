@@ -102,7 +102,14 @@ Antes de dar una tarea por terminada deben pasar: **pruebas, typecheck, linter y
 - No subas `node_modules/`, `.next/`, `coverage/` ni secretos.
 - Si falta una decisión de diseño que cambie el resultado (por ejemplo el color base de la interfaz), **pregunta al desarrollador antes de generar** en lugar de asumir.
 
-## 11. Estructura del proyecto
+## 11. Especificaciones con OpenSpec
+
+- **Todo cambio nuevo se especifica primero con OpenSpec**: propón con `/openspec-propose <cambio>`, revisa la propuesta, implementa con `/openspec-apply-change` y archiva con `/openspec-archive-change`. No empieces por el código.
+- Las especificaciones viven en `openspec/specs/` y describen **comportamiento observable** (no nombres de funciones ni librerías); se escriben en español, con los encabezados estructurales y `SHALL`/`MUST` en inglés.
+- Cada escenario especificado debe tener su prueba automática (TDD, sección 1).
+- Un cambio que modifica comportamiento actualiza la spec correspondiente; si la spec y el código se contradicen, se decide cuál es correcto y se deja anotado.
+
+## 12. Estructura del proyecto
 
 ```
 src/

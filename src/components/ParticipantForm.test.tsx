@@ -55,4 +55,13 @@ describe("ParticipantForm", () => {
 
     expect(screen.queryByRole("alert")).not.toBeInTheDocument();
   });
+
+  it("deshabilita el campo y el botón cuando isDisabled es true", () => {
+    render(
+      <ParticipantForm onAdd={jest.fn()} errorMessage={null} isDisabled />,
+    );
+
+    expect(screen.getByLabelText("Nombre del participante")).toBeDisabled();
+    expect(screen.getByRole("button", { name: "Agregar" })).toBeDisabled();
+  });
 });

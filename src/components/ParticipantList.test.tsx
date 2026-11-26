@@ -31,4 +31,19 @@ describe("ParticipantList", () => {
 
     expect(onRemove).toHaveBeenCalledWith("Pedro");
   });
+
+  it("deshabilita los botones de quitar cuando isDisabled es true", () => {
+    render(
+      <ParticipantList
+        participants={["Ana", "Pedro"]}
+        onRemove={jest.fn()}
+        isDisabled
+      />,
+    );
+
+    expect(screen.getByRole("button", { name: "Quitar a Ana" })).toBeDisabled();
+    expect(
+      screen.getByRole("button", { name: "Quitar a Pedro" }),
+    ).toBeDisabled();
+  });
 });
